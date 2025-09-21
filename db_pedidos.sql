@@ -4,7 +4,7 @@ use db_pedidos;
 CREATE TABLE pedido (
     id INT AUTO_INCREMENT PRIMARY KEY,
     cliente VARCHAR(100),
-    data_pedido DATE
+   
 );
 
 CREATE TABLE item_pedido (
@@ -13,5 +13,6 @@ CREATE TABLE item_pedido (
     produto VARCHAR(100),
     quantidade INT,
     preco DECIMAL(10,2),
+    categoria VARCHAR(100),
     FOREIGN KEY (pedido_id) REFERENCES pedido(id)
 );
