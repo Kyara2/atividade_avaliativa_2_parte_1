@@ -4,7 +4,6 @@ use db_pedidos;
 CREATE TABLE pedido (
     id INT AUTO_INCREMENT PRIMARY KEY,
     cliente VARCHAR(100),
-   
 );
 
 CREATE TABLE item_pedido (

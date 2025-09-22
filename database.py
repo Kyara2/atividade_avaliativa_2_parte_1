@@ -10,7 +10,9 @@ class Database:
         self.connection = None
         self.connect()
 
+
     def connect(self):
+        print("Tentando conectar...")
         try:
             self.connection = mysql.connector.connect(
                 host=self.host,
@@ -18,6 +20,8 @@ class Database:
                 password=self.password,
                 database=self.database
             )
+            print("Conexao com MySQL bem sucedida!")
+
         except Error as e:
             print(f"Erro ao conectar ao MySQL: {e}")
 
